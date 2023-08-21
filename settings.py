@@ -1,0 +1,1 @@
+SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"

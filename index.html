@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surral Resort - Antalya, Turkey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe9c0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add the new rule for the orange line */
+        #orange-line {
+            width: 80%;
+            height: 35px;
+            background-color: #ffa500; /* Light orange color */
+            margin-left: 10%;
+            border-radius: 45px;
+        }
+
+        h1, h2 {
+            color: #3498db;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            color: #34495e;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.6;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .image-frame {
+            max-width: 100%;
+            width: 300px;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-sequence {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #currentTime {
+            color: #3498db;
+            text-align: center;
+        }
+
+        .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the booking buttons */
+.booking-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Hover effect for the buttons */
+.booking-button:hover {
+    background-color: #c0392b;
+}
+
+.ytbv {
+    margin-left: 17.5%;
+}
+    </style>
+</head>
+<body>
+    <!-- Add the orange line element -->
+    <div id="orange-line"></div>
+
+    <h1>Vítejte v Surral Resort - Side, Turecko</h1>
+    <p id="currentTime">Načítání...</p>
+
+    <h2>O Surral Resort</h2>
+    <p>Surral Resort je luxusní přímořský hotel nacházející se v krásném městě Side v Turecku. Zapadá podél úchvatného středomořské pobřeží, nabízí dechberoucí výhledy, nedotčené pláže a zařízení světové třídy.</p>
+    <p>Ať už hledáte relaxaci, dobrodružství nebo požitkářství, Surral Resort má pro každého něco. Naše prostorné pokoje a apartmány jsou elegantně navrženy pro maximální pohodlí a styl. Hosté mohou využívat soukromých pláží, oživujících procedur v lázních, vynikajících možností stravování a široké nabídky rekreačních aktivit.</p>
+    <p>Pocítejte kouzlo Antalye při pobytu v Surral Resort. Prozkoumejte starověké ruiny, objevujte živé trhy nebo se jednoduše uvolněte u tyrkysové vody Středozemního moře.</p>
+
+    <h2>Galerie</h2>
+    <div class="image-sequence">
+        <img class="image-frame" src="sr1.jpg" alt="Obrázek exteriéru">
+        <img class="image-frame" src="sr2.jpg" alt="Obrázek interiéru">
+        <img class="image-frame" src="sr3.png" alt="Obrázek výhledu na moře">
+        <!-- Přidejte další obrázky, pokud je třeba -->
+    </div>
+    <h2>Video A Mapa</h2>
+<div class="ytbv">
+    <iframe width="450" height="253" src="https://www.youtube.com/embed/f_wLRywWlJ4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.0526829107516!2d31.31220021089663!3d36.81725746662287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c35ef3fe44d861%3A0x5599666c715bc395!2sSural%20Resort%20Hotel!5e0!3m2!1scs!2scz!4v1692641760567!5m2!1scs!2scz" width="450" height="253" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    
+
+    <!-- Button-style links for booking -->
+    <h2>Rezervace</h2>
+    <div class="button-container">
+        <a href="https://www.alexandria.cz/hotel/8656-sural-resort-alexandria-club" class="booking-button">Rezervujte na Alexandria</a>
+        <a href="https://www.invia.cz/hotel/turecko/side/sural-resort/?gclid=EAIaIQobChMImNC205PugAMVg5GDBx2GjgPBEAAYAiAAEgKeb_D_BwE" class="booking-button">Rezervovat na Invia</a>
+    </div>
+
+    <!-- Contact information -->
+    <h2>Kontaktní informace</h2>
+    <p>Adresa: 123 Pobřežní Avenue, Antalya, Turecko</p>
+    <p>Telefon: +90 555 123 4567</p>
+    <p>Email: info@surralresort.com</p>
+
+    <script>
+        function updateCurrentTime() {
+            const options = { timeZone: 'Europe/Istanbul', timeStyle: 'long', hour12: false };
+            const currentTime = new Date().toLocaleTimeString('en-US', options);
+
+            document.getElementById('currentTime').textContent = `Aktuální čas: ${currentTime}`;
+        }
+
+        // Aktualizace aktuálního času při načítání stránky a každou sekundu
+        updateCurrentTime();
+        setInterval(updateCurrentTime, 1000);
+    </script>
+</body>
+</html>
